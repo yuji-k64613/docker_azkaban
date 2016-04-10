@@ -18,7 +18,7 @@ WORKDIR /root/build/azkaban
 RUN ./gradlew distTar
 RUN ./gradlew distZip
 WORKDIR /root
-RUN tar zxvf ./build/azkaban/build/distributions/azkaban-solo-server-3.0.0.tar.gz
+RUN tar zxvf ./build/azkaban/build/distributions/azkaban-solo-server-*.tar.gz
 RUN ln -s azkaban-solo-server-* azkaban
 
 ADD script.sh /tmp/script.sh
